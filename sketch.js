@@ -42,12 +42,22 @@ function draw() {
   // draw sprites
   drawSprites();
    
-  var select_sprite = Math.round(random(1,3));
+  var select_sprites = Math.round(random(1,3));
 
+  // if (frameCount % 80 == 0) {
+  //   if (select_sprites == 1) {
+  //     createApples();
+  //   } else if (select_sprites == 2) {
+  //     createOrange();
+  //   } else {
+  //     createRed();
+  //   }
+  // }
+  
   if (frameCount % 80 == 0) {
-    if (select_sprite == 1) {
+    if (select_sprites == 1) {
       create (apple, appleImg, 0.07);
-    } else if (select_sprite == 2) {
+    } else if (select_sprites == 2) {
       create (orangeL, orangeImg, 0.08);
     } else {
       create (redL, redImg, 0.06);
@@ -62,3 +72,27 @@ function create (sprite, img, scale) {
   sprite.velocityY = 3;
   sprite.lifetime = 150;
 }
+
+// function createApples() {
+//   apple = createSprite(random(50, 350),40, 10, 10);
+//   apple.addImage(appleImg);
+//   apple.scale = 0.07;
+//   apple.velocityY = 3;
+//   apple.lifetime = 150;
+// }
+
+// function createOrange() {
+//   orangeL = createSprite(random(50, 350),40, 10, 10);
+//   orangeL.addImage(orangeImg);
+//   orangeL.scale = 0.08;
+//   orangeL.velocityY = 3;
+//   orangeL.lifetime = 150;
+// }
+  
+// function createRed() {
+//   redL = createSprite(random(50, 350),40, 10, 10);
+//   redL.addImage(redImg);
+//   redL.scale = 0.06;
+//   redL.velocityY = 3;
+//   redL.lifetime = 150;
+// }
