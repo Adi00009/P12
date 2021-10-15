@@ -96,3 +96,4 @@ function create (sprite, img, scale) {
 //   redL.velocityY = 3;
 //   redL.lifetime = 150;
 // }
+
